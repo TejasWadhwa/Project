@@ -1,2 +1,5 @@
 print("This is my Project")
-print("aa gyi main bhi tudum tudum :> ")
+print("aa gyi main bhi")
+print("Lets start the project")
+print("tudum tudum")
+
