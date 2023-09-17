@@ -123,6 +123,21 @@ class LibraryManagementSystem:
         DataFrameRight=LabelFrame(frame, text = "Book Details", bg = "#EEDFCC", fg = "#006400", bd = 10, relief = RIDGE, font=("times new roman", 20, "bold"))
         DataFrameRight.place(x = 910, y = 5, width = 560, height = 380 )
 
+        self.txtBox=Text(DataFrameRight, font=("arial", 12, "bold"), width=32, height=16, padx=2, pady=6)
+        self.txtBox.grid(row=0, column=2)
+
+        listScrollbar=Scrollbar(DataFrameRight)
+        listScrollbar.grid(row=0, column=1, sticky="ns")
+
+        listBoooks = ['Head Firt Book', 'Learn Python the Hard Way', 'Python Programming', 'Secrete Rahshy', 'Python Cookbook', 'Into to Machine Learning', 'Fluent Python', 'programming Python', 'The Algorithm', 'The technique Pyhton', 'Machine tecno', 'My Pyhton', 'Joss Ellif guru', 'Elite Jungle Python', 'Jungli Python', 'Mumbai Python', 'Pune Python', 'Guru of Python', 'Yellow Dragan', 'Red Python', 'Machine Python', 'Advance Python', 'Inton Python', 'RedChilli Python', 'Ishq Python']
+
+        listBox=Listbox(DataFrameRight, font=("arial", 11, "bold"), width=20, height=16)
+        listBox.grid(row=0, column=0, padx=4)
+        listScrollbar.config(command=listBox.yview)
+
+        for item in listBoooks:
+            listBox.insert(END,item)
+
         #BUTTONS FRAME
         Framebutton = Frame(self.root, bd = 10, relief=RIDGE, padx=20, bg="#EEDFCC")
         Framebutton.place(x = 0, y = 540, width=1530, height=70)
