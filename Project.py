@@ -161,6 +161,62 @@ class LibraryManagementSystem:
         FrameDetails = Frame(self.root, bd = 10, relief=RIDGE, padx=20, bg="#EEDFCC")
         FrameDetails.place(x = 0, y = 610, width=1530, height=195)
 
+        Table_frame=Frame(FrameDetails,bd = 6, relief=RIDGE, bg="powder blue")
+        Table_frame.place(x=0,y=2,width=1460,height=190)
+
+        xscroll=ttk.Scrollbar(Table_frame,orient=HORIZONTAL)
+        yscroll=ttk.Scrollbar(Table_frame,orient=VERTICAL)
+
+        self.library_table=ttk.Treeview(Table_frame,column=("member","prnno","title","firstname","lastname",
+                                        "address1","address2","postid","mobile","bookid","booktitle","author","dateborrowed",
+                                        "datedue","days","laterreturnfile","dateoverdue","finalprice"),xscrollcommand=xscroll.set,yscrollcommand=yscroll.set)
+        
+        xscroll.pack(side=BOTTOM, fill="x")
+        yscroll.pack(side=RIGHT, fill="y")
+
+        xscroll.config(command=self.library_table.xview)
+        yscroll.config(command=self.library_table.yview)
+
+        self.library_table.heading("Member",text="Member")
+        self.library_table.heading("Prnno", text="Prn-NO")
+        self.library_table.heading("Title", text="title")
+        self.library_table.heading("Firstname", text="First-Name")
+        self.library_table.heading("Lastname", text="Last-Name")
+        self.library_table.heading("Address1", text="Address")
+        self.library_table.heading("Address2", text="Address")
+        self.library_table.heading("Postid", text="Post-Id")
+        self.library_table.heading("Mobile no", text="Mobile-no")
+        self.library_table.heading("Book Id", text="Book-Id")
+        self.library_table.heading("Book-Title", text="Book-Title")
+        self.library_table.heading("Author", text="Author")
+        self.library_table.heading("Date", text="Date-borrowed")
+        self.library_table.heading("Date-due", text="Date_due")
+        self.library_table.heading("Days-on-Books", text="DaysonBooks")
+        self.library_table.heading("LaterReturnFile", text="Later-ReturnFile")
+        self.library_table.heading("Date-OverDue", text="Date-overDue")
+        self.library_table.heading("Final-price", text="final-price")
+
+        self.library_table["show"]="headings"
+        self.library_table.pack(fill=BOTH,expand=1)
+
+        self.library_table.column("member type", width=125)
+        self.library_table.column("prnno", width=100)
+        self.library_table.column("first-name", width=100)
+        self.library_table.column("last-name", width=100)
+        self.library_table.column("Address1", width=100)
+        self.library_table.column("Address2", width=100)
+        self.library_table.column("post id", width=100)
+        self.library_table.column("Mobile no", width=100)
+        self.library_table.column("Book Id", width=100)
+        self.library_table.column("book Title", width=100)
+        self.library_table.column("Author", width=100)
+        self.library_table.column("Date", width=100)
+        self.library_table.column("Date-due", width=100)
+        self.library_table.column("Days-on-Books", width=100)
+        self.library_table.column("laterreturnfile", width=100)
+        self.library_table.column("Date-OverDue", width=100)
+        self.library_table.column("Late-Fine", width=100)
+
 
 if __name__ == '__main__':
     root=Tk()
