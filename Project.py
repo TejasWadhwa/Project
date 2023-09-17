@@ -139,7 +139,7 @@ class LibraryManagementSystem:
         Framebutton = Frame(self.root, bd = 10, relief=RIDGE, padx=20, bg="#EEDFCC")
         Framebutton.place(x = 0, y = 540, width=1530, height=70)
 
-        btnAddData=Button(Framebutton,text="Add Data",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton,text="Add Data",  font=("arial", 12,"bold"), width=23 ,bg="azure",fg="black")
         btnAddData.grid(row=0,column=0)
 
         btnAddData=Button(Framebutton,text="Show Data",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
