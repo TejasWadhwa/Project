@@ -151,10 +151,10 @@ class LibraryManagementSystem:
         btnAddData=Button(Framebutton,text="Delete",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
         btnAddData.grid(row=0,column=3)
 
-        btnAddData=Button(Framebutton,text="Exit",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton,text="Reset",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
         btnAddData.grid(row=0,column=4)
         
-        btnAddData=Button(Framebutton,text="Add Data",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton,text="Exit",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
         btnAddData.grid(row=0,column=5)
 
         #INFORMATION FRAME
