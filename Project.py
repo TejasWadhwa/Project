@@ -145,8 +145,9 @@ class LibraryManagementSystem:
         listScrollbar=Scrollbar(DataFrameRight)
         listScrollbar.grid(row=0, column=1, sticky="ns")
 
-        listBoooks = ['Head Firt Book', 'Learn Python the Hard Way', 'Python Programming', 'Secrete Rahshy', 'Python Cookbook', 'Into to Machine Learning', 'Fluent Python', 'programming Python', 'The Algorithm', 'The technique Pyhton', 'Machine tecno', 'My Pyhton', 'Joss Ellif guru', 'Elite Jungle Python', 'Jungli Python', 'Mumbai Python', 'Pune Python', 'Guru of Python', 'Yellow Dragan', 'Red Python', 'Machine Python', 'Advance Python', 'Inton Python', 'RedChilli Python', 'Ishq Python']
+        listBoooks = ['Head Firt Book', 'Learn Python the Hard Way', 'Python Programming', 'Secrete Rahshy', 'Python Cookbook', 'Into to Machine Learning', 'Fluent Python', 'programming Python', 'The Algorithm', 'The technique Python', 'Machine tecno', 'My Python', 'Joss Ellif guru', 'Elite Jungle Python', 'Jungli Python', 'Mumbai Python', 'Pune Python', 'Guru of Python', 'Yellow Dragan', 'Red Python', 'Machine Python', 'Advance Python', 'Inton Python', 'RedChilli Python', 'Ishq Python']
         
+        #SHOWDATA
         def SelectBook(event=""):
             value = str(listBox.get(listBox.curselection()))
             x = value
@@ -164,6 +165,381 @@ class LibraryManagementSystem:
                 self.latereturnfine_var.set("Rs.50")
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.800")
+
+            elif (x=="Learn Python the Hard Way"):
+                self.bookid_var.set("BKID4578")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Arthur Morgan")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(15)
+                self.latereturnfine_var.set("Rs.50")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.750")
+
+            elif (x=="Python Programming"):
+                self.bookid_var.set("BKID2232")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Harry Garfield")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(11)
+                self.latereturnfine_var.set("Rs.50")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.760")
+
+            elif (x=="Secrete Rahshy"):
+                self.bookid_var.set("BKID6680")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Robert Frost ")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(10)
+                self.latereturnfine_var.set("Rs.50")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.760")
+
+            elif (x=="Python Cookbook"):
+                self.bookid_var.set("BKID7908")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Boris Pasternak")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(20)
+                self.latereturnfine_var.set("Rs.100")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.1000")
+
+            elif (x=="Into to Machine Learning"):
+                self.bookid_var.set("BKID2990")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Anthony Powell")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(30)
+                self.latereturnfine_var.set("Rs.40")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.900")
+
+            elif (x=="Fluent Python"):
+                self.bookid_var.set("BKID3888")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("John Cowper Powys")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(22)
+                self.latereturnfine_var.set("Rs.40")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.880")
+
+            elif (x=="programming Python"):
+                self.bookid_var.set("BKID4690")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Robert Frost")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(30)
+                self.latereturnfine_var.set("Rs.70")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.880")
+
+            elif (x=="The Algorithm"):
+                self.bookid_var.set("BKID8888")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("David Jones")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(40)
+                self.latereturnfine_var.set("Rs.150")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.1200")
+
+            elif (x=="The technique Python"):
+                self.bookid_var.set("BKID0089")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Elizabeth Bishop")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(28)
+                self.latereturnfine_var.set("Rs.90")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.1150")
+
+            elif (x=="Machine tecno"):
+                self.bookid_var.set("BKID1334")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Hermann Broch")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(18)
+                self.latereturnfine_var.set("Rs.90")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.900")
+
+            elif (x=="My Python"):
+                self.bookid_var.set("BKID1666")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Peter Seeberg")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(25)
+                self.latereturnfine_var.set("Rs.110")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.1000")
+
+            elif (x=="Joss Ellif guru"):
+                self.bookid_var.set("BKID4789")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Alexander Blok")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(11)
+                self.latereturnfine_var.set("Rs.30")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.690")
+
+            elif (x=="Elite Jungle Python"):
+                self.bookid_var.set("BKID9999")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("James Joyce")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(23)
+                self.latereturnfine_var.set("Rs.100")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.1200")
+
+            elif (x=="Jungli Python"):
+                self.bookid_var.set("BKID4678")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Victor Serge")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(15)
+                self.latereturnfine_var.set("Rs.30")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.500")
+
+            elif (x=="Mumbai Python"):
+                self.bookid_var.set("BKID4490")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Harry Martinson")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(20)
+                self.latereturnfine_var.set("Rs.30")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.550")
+
+            elif (x=="Pune Python"):
+                self.bookid_var.set("BKID2009")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Pablo Neruda")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(20)
+                self.latereturnfine_var.set("Rs.30")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.550")
+
+            elif (x=="Guru of Python"):
+                self.bookid_var.set("BKID4545")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Mina Loy")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(40)
+                self.latereturnfine_var.set("Rs.60")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.700")
+
+            elif (x=="Yellow Dragan"):
+                self.bookid_var.set("BKID0090")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Frank Wedekind")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(15)
+                self.latereturnfine_var.set("Rs.60")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.680")
+
+            elif (x=="Red Python"):
+                self.bookid_var.set("BKID121")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Artur Lundkvist")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(30)
+                self.latereturnfine_var.set("Rs.110")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.850")
+
+            elif (x=="Machine Python"):
+                self.bookid_var.set("BKID4490")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Frank Wedekind")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(32)
+                self.latereturnfine_var.set("Rs.100")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.800")
+
+            elif (x=="Advance Python"):
+                self.bookid_var.set("BKID9997")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("George Orwell")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(40)
+                self.latereturnfine_var.set("Rs.200")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.1150")
+
+            elif (x=="Inton Python"):
+                self.bookid_var.set("BKID7777")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Hart Crane")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(21)
+                self.latereturnfine_var.set("Rs.220")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.1200")
+
+            elif (x=="RedChilli Python"):
+                self.bookid_var.set("BKID0001")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Alfred Döblin")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(50)
+                self.latereturnfine_var.set("Rs.300")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.1500")
+
+            elif (x=="Ishq Python"):
+                self.bookid_var.set("BKID0359")
+                self.booktitle_var.set("Python Manual")
+                self.auther_var.set("Ivan Cankar")
+
+                d1 = datetime.datetime.today()
+                d2 = datetime.timedelta(days=15)
+                d3 = d1+d2
+                self.dateborrowed_var.set(d1)
+                self.datedue_var.set(d3)
+                self.daysonbook_var.set(35)
+                self.latereturnfine_var.set("Rs.150")
+                self.dateoverdue_var.set("NO")
+                self.finalprice_var.set("Rs.950")
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+
+            
 
         listBox=Listbox(DataFrameRight, font=("arial", 11, "bold"), width=20, height=16)
         listBox.bind("<<ListboxSelect>>", SelectBook)
