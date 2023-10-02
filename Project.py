@@ -147,7 +147,7 @@ class LibraryManagementSystem:
 
         listBoooks = ['Head Firt Book', 'Learn Python the Hard Way', 'Python Programming', 'Secrete Rahshy', 'Python Cookbook', 'Into to Machine Learning', 'Fluent Python', 'programming Python', 'The Algorithm', 'The technique Python', 'Machine tecno', 'My Python', 'Joss Ellif guru', 'Elite Jungle Python', 'Jungli Python', 'Mumbai Python', 'Pune Python', 'Guru of Python', 'Yellow Dragan', 'Red Python', 'Machine Python', 'Advance Python', 'Inton Python', 'RedChilli Python', 'Ishq Python']
         
-        #SHOWDATA
+        #SHOWDATA BOTTOM FRAME
         def SelectBook(event=""):
             value = str(listBox.get(listBox.curselection()))
             x = value
@@ -551,7 +551,7 @@ class LibraryManagementSystem:
         btnAddData=Button(Framebutton,text="Delete",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
         btnAddData.grid(row=0,column=3)
 
-        btnAddData=Button(Framebutton,text="Reset",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton, command=self.reset, text="Reset",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
         btnAddData.grid(row=0,column=4)
         
         btnAddData=Button(Framebutton,text="Exit",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
@@ -687,6 +687,7 @@ class LibraryManagementSystem:
         self.dateoverdue_var.set(row[16]),
         self.finalprice_var.set(row[17])
 
+    #SHOW_DATA
     def showData(self):
         self.txtBox.insert(END, "Member Type:\t\t"+ self.member_var.get() + "\n")
         self.txtBox.insert(END, "PRN NO:\t\t"+ self.prn_var.get() + "\n")
@@ -706,6 +707,29 @@ class LibraryManagementSystem:
         self.txtBox.insert(END, "LateReturnFine\t\t"+ self.latereturnfine_var.get() + "\n")
         self.txtBox.insert(END, "DateOverDue\t\t"+ self.dateoverdue_var.get() + "\n")
         self.txtBox.insert(END, "FinalPrice\t\t"+ self.finalprice_var.get() + "\n")
+
+
+    #RESET_DATA
+    def reset(self):
+        self.member_var.set(""),
+        self.prn_var.set(""),
+        self.id_var.set(""),
+        self.firstname_var.set(""),
+        self.lastname_var.set(""),
+        self.address1_var.set(""),
+        self.address2_var.set(""),
+        self.postcode_var.set(""),
+        self.mobile_var.set(""),
+        self.bookid_var.set(""),
+        self.booktitle_var.set(""),
+        self.auther_var.set(""),
+        self.dateborrowed_var.set(""),
+        self.datedue_var.set(""),
+        self.daysonbook_var.set(""),
+        self.latereturnfine_var.set(""),
+        self.dateoverdue_var.set(""),
+        self.finalprice_var.set(""),
+        self.txtBox.delete("1.0", END)
 
 
 
