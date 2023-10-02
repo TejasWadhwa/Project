@@ -527,20 +527,6 @@ class LibraryManagementSystem:
                 self.finalprice_var.set("Rs.950")
 
             
-
-            
-
-            
-
-            
-
-            
-
-            
-
-
-            
-
         listBox=Listbox(DataFrameRight, font=("arial", 11, "bold"), width=20, height=16)
         listBox.bind("<<ListboxSelect>>", SelectBook)
         listBox.grid(row=0, column=0, padx=4)
@@ -556,7 +542,7 @@ class LibraryManagementSystem:
         btnAddData=Button(Framebutton, command=self.add_data, text="Add Data",  font=("arial", 12,"bold"), width=23 ,bg="azure",fg="black")
         btnAddData.grid(row=0,column=0)
 
-        btnAddData=Button(Framebutton,text="Show Data",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton, command=self.showData, text="Show Data",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
         btnAddData.grid(row=0,column=1)
 
         btnAddData=Button(Framebutton,text="Update",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
@@ -581,7 +567,7 @@ class LibraryManagementSystem:
         xscroll=ttk.Scrollbar(Table_frame,orient=HORIZONTAL)
         yscroll=ttk.Scrollbar(Table_frame,orient=VERTICAL)
 
-        self.library_table=ttk.Treeview(Table_frame,column=("member","prnno","title","firstname","lastname",
+        self.library_table=ttk.Treeview(Table_frame,column=("member","prnno","idno","firstname","lastname",
                                         "address1","address2","postid","mobile","bookid","booktitle","author","dateborrowed",
                                         "datedue","days","laterreturnfine","dateoverdue","finalprice"),xscrollcommand=xscroll.set,yscrollcommand=yscroll.set)
         
@@ -593,7 +579,7 @@ class LibraryManagementSystem:
 
         self.library_table.heading("member",text="Member")
         self.library_table.heading("prnno", text="PRN No.")
-        self.library_table.heading("title", text="Title")
+        self.library_table.heading("idno", text="ID No.")
         self.library_table.heading("firstname", text="First Name")
         self.library_table.heading("lastname", text="Last Name")
         self.library_table.heading("address1", text="Address1")
@@ -614,11 +600,12 @@ class LibraryManagementSystem:
         self.library_table.pack(fill=BOTH,expand=1)
 
         self.library_table.column("member", width=125)
-        self.library_table.column("prnno", width=100)
+        self.library_table.column("prnno", width=90)
+        self.library_table.column("idno", width=90)
         self.library_table.column("firstname", width=100)
         self.library_table.column("lastname", width=100)
-        self.library_table.column("address1", width=100)
-        self.library_table.column("address2", width=100)
+        self.library_table.column("address1", width=120)
+        self.library_table.column("address2", width=120)
         self.library_table.column("postid", width=100)
         self.library_table.column("mobile", width=100)
         self.library_table.column("bookid", width=100)
@@ -630,6 +617,9 @@ class LibraryManagementSystem:
         self.library_table.column("laterreturnfine", width=100)
         self.library_table.column("dateoverdue", width=100)
         self.library_table.column("finalprice", width=100)
+
+        self.fetch_data()
+        self.library_table.bind("<ButtonRelease-1>",self.get_cursor)
 
     def add_data(self):
         conn = mysql.connector.connect(host = "localhost", username = "root", password = "Professor1348", database = "my_data")
@@ -656,9 +646,67 @@ class LibraryManagementSystem:
         ))
 
         conn.commit()
+        self.fetch_data()
         conn.close()
 
         messagebox.showinfo("Sucess", "Member Successfully Inserted")
+
+    def fetch_data(self):
+        conn = mysql.connector.connect(host = "localhost", username = "root", password = "Professor1348", database = "my_data")
+        my_cursor = conn.cursor()
+        my_cursor.execute("select * from library")
+        rows = my_cursor.fetchall()
+        if len(rows)!=0:
+            self.library_table.delete(*self.library_table.get_children())
+            for i in rows:
+                self.library_table.insert("",END,values=i)
+            conn.commit()
+        conn.close()
+
+    def get_cursor(self, event=""):
+        cursor_row= self.library_table.focus()
+        content= self.library_table.item(cursor_row)
+        row= content['values']
+
+        self.member_var.set(row[0]),
+        self.prn_var.set(row[1]),
+        self.id_var.set(row[2]),
+        self.firstname_var.set(row[3]),
+        self.lastname_var.set(row[4]),
+        self.address1_var.set(row[5]),
+        self.address2_var.set(row[6]),
+        self.postcode_var.set(row[7]),
+        self.mobile_var.set(row[8]),
+        self.bookid_var.set(row[9]),
+        self.booktitle_var.set(row[10]),
+        self.auther_var.set(row[11]),
+        self.dateborrowed_var.set(row[12]),
+        self.datedue_var.set(row[13]),
+        self.daysonbook_var.set(row[14]),
+        self.latereturnfine_var.set(row[15]),
+        self.dateoverdue_var.set(row[16]),
+        self.finalprice_var.set(row[17])
+
+    def showData(self):
+        self.txtBox.insert(END, "Member Type:\t\t"+ self.member_var.get() + "\n")
+        self.txtBox.insert(END, "PRN NO:\t\t"+ self.prn_var.get() + "\n")
+        self.txtBox.insert(END, "ID No:\t\t"+ self.id_var.get() + "\n")
+        self.txtBox.insert(END, "FirstName:\t\t"+ self.firstname_var.get() + "\n")
+        self.txtBox.insert(END, "LastName\t\t"+ self.lastname_var.get() + "\n")
+        self.txtBox.insert(END, "Address 1:\t\t"+ self.address1_var.get() + "\n")
+        self.txtBox.insert(END, "Address 2:\t\t"+ self.address2_var.get() + "\n")
+        self.txtBox.insert(END, "Post Code:\t\t"+ self.postcode_var.get() + "\n")
+        self.txtBox.insert(END, "Mobile No:\t\t"+ self.mobile_var.get() + "\n")
+        self.txtBox.insert(END, "Book ID:\t\t"+ self.bookid_var.get() + "\n")
+        self.txtBox.insert(END, "Book Title\t\t"+ self.booktitle_var.get() + "\n")
+        self.txtBox.insert(END, "Auther:\t\t"+ self.auther_var.get() + "\n")
+        self.txtBox.insert(END, "DateBorrowed\t\t"+ self.dateborrowed_var.get() + "\n")
+        self.txtBox.insert(END, "DateDue\t\t"+ self.datedue_var.get() + "\n")
+        self.txtBox.insert(END, "DaysOnBook\t\t"+ self.daysonbook_var.get() + "\n")
+        self.txtBox.insert(END, "LateReturnFine\t\t"+ self.latereturnfine_var.get() + "\n")
+        self.txtBox.insert(END, "DateOverDue\t\t"+ self.dateoverdue_var.get() + "\n")
+        self.txtBox.insert(END, "FinalPrice\t\t"+ self.finalprice_var.get() + "\n")
+
 
 
 
