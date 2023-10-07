@@ -2,6 +2,7 @@ from tkinter import*
 from tkinter import ttk
 import mysql.connector
 from tkinter import messagebox
+import tkinter
 import datetime
 
 
@@ -545,16 +546,16 @@ class LibraryManagementSystem:
         btnAddData=Button(Framebutton, command=self.showData, text="Show Data",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
         btnAddData.grid(row=0,column=1)
 
-        btnAddData=Button(Framebutton,text="Update",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton,command=self.update,text="Update",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
         btnAddData.grid(row=0,column=2)
 
-        btnAddData=Button(Framebutton,text="Delete",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton,command=self.delete,text="Delete",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
         btnAddData.grid(row=0,column=3)
 
         btnAddData=Button(Framebutton, command=self.reset, text="Reset",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
         btnAddData.grid(row=0,column=4)
         
-        btnAddData=Button(Framebutton,text="Exit",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton,command=self.iExit,text="Exit",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
         btnAddData.grid(row=0,column=5)
 
         #INFORMATION FRAME
@@ -650,6 +651,39 @@ class LibraryManagementSystem:
         conn.close()
 
         messagebox.showinfo("Sucess", "Member Successfully Inserted")
+    
+    def update(self):
+        conn = mysql.connector.connect(host = "localhost", username = "root", password = "Professor1348", database = "my_data")
+        my_cursor = conn.cursor()
+        my_cursor.execute("update librsry set member=%s,ID=%s,FirstName=%s,LastName=%s,Address1=%s,Address2=%s,PostId=%s,Mobile=%s,Booktitle=%s,Auther=%s,dateborrowe=%s,datedue=%s,datsofbook=%s,laterreturnfine=%s,dateoverdue=%s,finalprice=%s where PRN_NO=%s",(
+             self.member_var.get(),
+             self.prn_var.get(),
+             self.id_var.get(),
+             self.firstname_var.get(),
+             self.lastname_var.get(),
+             self.address1_var.get(),
+             self.address2_var.get(),
+             self.postcode_var.get(),
+             self.mobile_var.get(),
+             self.bookid_var.get(),
+             self.booktitle_var.get(),
+             self.auther_var.get(),
+             self.dateborrowed_var.get(),
+             self.datedue_var.get(),
+             self.daysonbook_var.get(),
+             self.latereturnfine_var.get(),
+             self.dateoverdue_var.get(),
+             self.finalprice_var.get(),
+             self.prn_var.get()
+        ))
+    
+        conn.commit()
+        self.fetch_data()
+        self.reset()
+        conn.close()
+
+        messagebox.showinfo("Sucess", "Member has been Updated")
+
 
     def fetch_data(self):
         conn = mysql.connector.connect(host = "localhost", username = "root", password = "Professor1348", database = "my_data")
@@ -732,7 +766,28 @@ class LibraryManagementSystem:
         self.txtBox.delete("1.0", END)
 
 
+    def iExit(self):
+        iExit=tkinter.messagebox.askyesno("Library Management System","Do you want to exit")
+        if iExit>0:
+            self.root.destroy()
+            return
+    
+    def delete(self):
+        if self.prn_var.get()=="" or self.id_var.get()=="":
+          messagebox.showerror("Error","First Select The Member")
+        else:
+            conn = mysql.connector.connect(host = "localhost", username = "root", password = "Professor1348", database = "my_data")
+            my_cursor = conn.cursor()
+            query="Delete from library where PRN_no=%s"
+            value(self.prn_val.get(),)
+            my_cursor.execute(query,value)
 
+            conn.commit()
+            self.fetch_data()
+            self.reset()
+            conn.close()
+
+            messagebox.showinfo("Success","Member has been Deleted")
 
 if __name__ == '__main__':
     root=Tk()
