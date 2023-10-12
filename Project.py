@@ -98,7 +98,7 @@ class LibraryManagementSystem:
 
         lblBookTitle = Label(DataFrameLeft, font=("arial", 12, "bold"), text="Book Title:", padx=2, pady=4, bg = "#EEDFCC")
         lblBookTitle.grid(row=1, column=2, sticky=W)
-        lblBookTitle=Entry(DataFrameLeft, font=("arial", 13, "bold"), textvariable=self.booktitle_var, width=29)
+        lblBookTitle=Entry(DataFrameLeft, font=("arial", 13, "bold"), textvariable=self.booktitle_var, width=32)
         lblBookTitle.grid(row=1, column=3)
 
         lblAuther = Label(DataFrameLeft, font=("arial", 12, "bold"), text="Auther Name:", padx=2, pady=4, bg = "#EEDFCC")
@@ -146,17 +146,19 @@ class LibraryManagementSystem:
 
         listScrollbar=Scrollbar(DataFrameRight)
         listScrollbar.grid(row=0, column=1, sticky="ns")
-
-        listBoooks = ['Head Firt Book', 'Learn Python the Hard Way', 'Python Programming', 'Secrete Rahshy', 'Python Cookbook', 'Into to Machine Learning', 'Fluent Python', 'programming Python', 'The Algorithm', 'The technique Python', 'Machine tecno', 'My Python', 'Joss Ellif guru', 'Elite Jungle Python', 'Jungli Python', 'Mumbai Python', 'Pune Python', 'Guru of Python', 'Yellow Dragan', 'Red Python', 'Machine Python', 'Advance Python', 'Inton Python', 'RedChilli Python', 'Ishq Python']
         
-        #SHOWDATA BOTTOM FRAME
+        
+
+        listBoooks = ['Atomic Habits', 'Principles', 'The Psychology of Money', 'Mindset', 'Rich Dad Poor Dad', 'The Miracle Morning', 'Trillions', 'The School of Life', 'The Oracle of Night', 'Designing Your Life', 'Emotional Intelligence', 'My Age Of Anxiety', 'Words Can Change Your Brain', 'Stumbling On Happiness', 'The Paradox Of Choice', 'The Honest Truth About Dishonesty', 'The Upside Of Your Dark Side', 'Thinking Fast And Slow', 'The Dictionary of Body Language', 'Games People Play', "Don't Believe Everything You Think", 'The Automatic Millionaire', 'The One-Page Financial Plan', 'Secrets Of The Millionaire Mind', 'The Total Money Makeover']
+        
+        #FILLDATA
         def SelectBook(event=""):
             value = str(listBox.get(listBox.curselection()))
             x = value
-            if (x=="Head Firt Book"):
+            if (x=="Atomic Habits"):
                 self.bookid_var.set("BKID5454")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Paul Berry")
+                self.booktitle_var.set("Atomic Habits")
+                self.auther_var.set("James Clear")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -168,10 +170,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.800")
 
-            elif (x=="Learn Python the Hard Way"):
+            elif (x=="Principles"):
                 self.bookid_var.set("BKID4578")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Arthur Morgan")
+                self.booktitle_var.set("Principles")
+                self.auther_var.set("Ray Dalio")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -183,10 +185,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.750")
 
-            elif (x=="Python Programming"):
+            elif (x=="The Psychology of Money"):
                 self.bookid_var.set("BKID2232")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Harry Garfield")
+                self.booktitle_var.set("The Psychology of Money")
+                self.auther_var.set("Morgan Housel")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -198,10 +200,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.760")
 
-            elif (x=="Secrete Rahshy"):
+            elif (x=="Mindset"):
                 self.bookid_var.set("BKID6680")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Robert Frost ")
+                self.booktitle_var.set("Mindset")
+                self.auther_var.set("Carol Dweck")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -213,10 +215,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.760")
 
-            elif (x=="Python Cookbook"):
+            elif (x=="Rich Dad Poor Dad"):
                 self.bookid_var.set("BKID7908")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Boris Pasternak")
+                self.booktitle_var.set("Rich Dad Poor Dad")
+                self.auther_var.set("Robert T. Kiyosaki")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -228,10 +230,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.1000")
 
-            elif (x=="Into to Machine Learning"):
+            elif (x=="The Miracle Morning"):
                 self.bookid_var.set("BKID2990")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Anthony Powell")
+                self.booktitle_var.set("The Miracle Morning")
+                self.auther_var.set("Hal Elrod")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -243,10 +245,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.900")
 
-            elif (x=="Fluent Python"):
+            elif (x=="Trillions"):
                 self.bookid_var.set("BKID3888")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("John Cowper Powys")
+                self.booktitle_var.set("Trillions")
+                self.auther_var.set("Robin Wigglesworth")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -258,10 +260,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.880")
 
-            elif (x=="programming Python"):
+            elif (x=="The School of Life"):
                 self.bookid_var.set("BKID4690")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Robert Frost")
+                self.booktitle_var.set("The School of Life")
+                self.auther_var.set("Alain de Botton")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -273,10 +275,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.880")
 
-            elif (x=="The Algorithm"):
+            elif (x=="The Oracle of Night"):
                 self.bookid_var.set("BKID8888")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("David Jones")
+                self.booktitle_var.set("The Oracle of Night")
+                self.auther_var.set("Sidarta Ribeiro")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -288,10 +290,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.1200")
 
-            elif (x=="The technique Python"):
+            elif (x=="Designing Your Life"):
                 self.bookid_var.set("BKID0089")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Elizabeth Bishop")
+                self.booktitle_var.set("Designing Your Life")
+                self.auther_var.set("Bill Burnett")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -303,10 +305,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.1150")
 
-            elif (x=="Machine tecno"):
+            elif (x=="Emotional Intelligence"):
                 self.bookid_var.set("BKID1334")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Hermann Broch")
+                self.booktitle_var.set("Emotional Intelligence")
+                self.auther_var.set("Daniel Goleman")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -318,10 +320,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.900")
 
-            elif (x=="My Python"):
+            elif (x=="My Age Of Anxiety"):
                 self.bookid_var.set("BKID1666")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Peter Seeberg")
+                self.booktitle_var.set("My Age Of Anxiety")
+                self.auther_var.set("Scott Stossel")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -333,10 +335,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.1000")
 
-            elif (x=="Joss Ellif guru"):
+            elif (x=="Words Can Change Your Brain"):
                 self.bookid_var.set("BKID4789")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Alexander Blok")
+                self.booktitle_var.set("Words Can Change Your Brain")
+                self.auther_var.set("Andrew B. Newberg")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -348,10 +350,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.690")
 
-            elif (x=="Elite Jungle Python"):
+            elif (x=="Stumbling On Happiness"):
                 self.bookid_var.set("BKID9999")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("James Joyce")
+                self.booktitle_var.set("Stumbling On Happiness")
+                self.auther_var.set("Dan Gilbert")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -363,10 +365,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.1200")
 
-            elif (x=="Jungli Python"):
+            elif (x=="The Paradox Of Choice"):
                 self.bookid_var.set("BKID4678")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Victor Serge")
+                self.booktitle_var.set("The Paradox Of Choice")
+                self.auther_var.set("Barry Schwartz")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -378,10 +380,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.500")
 
-            elif (x=="Mumbai Python"):
+            elif (x=="The Honest Truth About Dishonesty"):
                 self.bookid_var.set("BKID4490")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Harry Martinson")
+                self.booktitle_var.set("The Honest Truth About Dishonesty")
+                self.auther_var.set("Dan Ariely")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -393,10 +395,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.550")
 
-            elif (x=="Pune Python"):
+            elif (x=="The Upside Of Your Dark Side"):
                 self.bookid_var.set("BKID2009")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Pablo Neruda")
+                self.booktitle_var.set("The Upside Of Your Dark Side")
+                self.auther_var.set("Todd Kashdan")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -408,10 +410,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.550")
 
-            elif (x=="Guru of Python"):
+            elif (x=="Thinking Fast And Slow"):
                 self.bookid_var.set("BKID4545")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Mina Loy")
+                self.booktitle_var.set("Thinking Fast And Slow")
+                self.auther_var.set("Daniel Kahneman")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -423,10 +425,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.700")
 
-            elif (x=="Yellow Dragan"):
+            elif (x=="The Dictionary of Body Language"):
                 self.bookid_var.set("BKID0090")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Frank Wedekind")
+                self.booktitle_var.set("The Dictionary of Body Language")
+                self.auther_var.set("Joe Navarro")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -438,10 +440,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.680")
 
-            elif (x=="Red Python"):
+            elif (x=="Games People Play"):
                 self.bookid_var.set("BKID121")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Artur Lundkvist")
+                self.booktitle_var.set("Games People Play")
+                self.auther_var.set("Eric Berne")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -453,10 +455,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.850")
 
-            elif (x=="Machine Python"):
+            elif (x=="Don't Believe Everything You Think"):
                 self.bookid_var.set("BKID4490")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Frank Wedekind")
+                self.booktitle_var.set("Don't Believe Everything You Think")
+                self.auther_var.set("Joseph Nguyen")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -468,10 +470,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.800")
 
-            elif (x=="Advance Python"):
+            elif (x=="The Automatic Millionaire"):
                 self.bookid_var.set("BKID9997")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("George Orwell")
+                self.booktitle_var.set("The Automatic Millionaire")
+                self.auther_var.set("David Bach")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -483,10 +485,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.1150")
 
-            elif (x=="Inton Python"):
+            elif (x=="The One-Page Financial Plan"):
                 self.bookid_var.set("BKID7777")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Hart Crane")
+                self.booktitle_var.set("The One-Page Financial Plan")
+                self.auther_var.set("Carl Richards")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -498,10 +500,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.1200")
 
-            elif (x=="RedChilli Python"):
+            elif (x=="Secrets Of The Millionaire Mind"):
                 self.bookid_var.set("BKID0001")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Alfred Döblin")
+                self.booktitle_var.set("Secrets Of The Millionaire Mind")
+                self.auther_var.set("T. Harv Eker")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
@@ -513,10 +515,10 @@ class LibraryManagementSystem:
                 self.dateoverdue_var.set("NO")
                 self.finalprice_var.set("Rs.1500")
 
-            elif (x=="Ishq Python"):
+            elif (x=="The Total Money Makeover"):
                 self.bookid_var.set("BKID0359")
-                self.booktitle_var.set("Python Manual")
-                self.auther_var.set("Ivan Cankar")
+                self.booktitle_var.set("The Total Money Makeover")
+                self.auther_var.set("Dave Ramsey")
 
                 d1 = datetime.datetime.today()
                 d2 = datetime.timedelta(days=15)
