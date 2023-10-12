@@ -655,9 +655,8 @@ class LibraryManagementSystem:
     def update(self):
         conn = mysql.connector.connect(host = "localhost", username = "root", password = "Professor1348", database = "my_data")
         my_cursor = conn.cursor()
-        my_cursor.execute("update librsry set member=%s,ID=%s,FirstName=%s,LastName=%s,Address1=%s,Address2=%s,PostId=%s,Mobile=%s,Booktitle=%s,Auther=%s,dateborrowe=%s,datedue=%s,datsofbook=%s,laterreturnfine=%s,dateoverdue=%s,finalprice=%s where PRN_NO=%s",(
+        my_cursor.execute("update library set Member=%s,ID=%s,FirstName=%s,LastName=%s,Address1=%s,Address2=%s,PostId=%s,Mobile=%s,Bookid=%s,BookTitle=%s,Auther=%s,Dateborrowed=%s,Datedue=%s,daysofbook=%s,latereturnfine=%s,dateoverdue=%s,finalprice=%s where PRN_NO=%s",(
              self.member_var.get(),
-             self.prn_var.get(),
              self.id_var.get(),
              self.firstname_var.get(),
              self.lastname_var.get(),
@@ -779,7 +778,7 @@ class LibraryManagementSystem:
             conn = mysql.connector.connect(host = "localhost", username = "root", password = "Professor1348", database = "my_data")
             my_cursor = conn.cursor()
             query="Delete from library where PRN_no=%s"
-            value(self.prn_val.get(),)
+            value=(self.prn_var.get(),)
             my_cursor.execute(query,value)
 
             conn.commit()
