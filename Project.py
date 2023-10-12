@@ -43,13 +43,14 @@ class LibraryManagementSystem:
         DataFrameLeft=LabelFrame(frame, text = "Membership", bg = "#EEDFCC", fg = "#006400", bd = 10, relief = RIDGE, font=("times new roman", 20, "bold"))
         DataFrameLeft.place(x = 0, y = 5, width = 900, height = 380 )
 
-        lblMemebr = Label(DataFrameLeft, bg="#EEDFCC", text = "Member Type", textvariable= self.member_var, font=("arial", 12, "bold"),padx= 2, pady = 6)
-        lblMemebr.grid(row=0, column=0, sticky=W)
+        lblMember = Label(DataFrameLeft, bg="#EEDFCC", text = "Member Type:", textvariable= self.member_var, font=("arial", 12, "bold"),padx= 2, pady = 6)
+        lblMember.grid(row=0, column=0, sticky=W)
 
         comMember = ttk.Combobox(DataFrameLeft, font=("arial", 12, "bold"), width = 27, state="readonly")
         comMember["value"]=("Admin Staff", "Student", "Lecturer")
         comMember.grid(row=0, column=1)
 
+        
         lblPRN_NO = Label(DataFrameLeft, font=("arial", 12, "bold"), text="PRN No:", padx=2, bg = "#EEDFCC")
         lblPRN_NO.grid(row=1, column=0, sticky=W)
         txtPRN_No=Entry(DataFrameLeft, font=("arial", 13, "bold"), textvariable=self.prn_var, width=29)
