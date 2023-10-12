@@ -12,6 +12,8 @@ class LibraryManagementSystem:
         self.root.title("Integrated Library Management System")
         self.root.geometry("1550x800+0+0")
 
+        
+
         #VARIABLE
         self.member_var=StringVar()
         self.prn_var=StringVar()
@@ -32,7 +34,9 @@ class LibraryManagementSystem:
         self.dateoverdue_var=StringVar()
         self.finalprice_var=StringVar()
 
-        lbltitle = Label(self.root, text = "INTEGRATED LIBRARY MANAGEMENT SYSTEM", bg = "black", fg = "white", bd = 12, relief = RIDGE, font=("times new roman", 40, "bold"),padx=2,pady=6)
+
+
+        lbltitle = Label(self.root, text = "DIGITAL LIBRARY", bg = "black", fg = "white", bd = 12, relief = RIDGE, font=("times new roman", 40, "bold"),padx=2,pady=6)
         lbltitle.pack(side=TOP, fill=X)
 
         frame = Frame(self.root, bd = 12, relief=RIDGE, padx=20, bg="#EEDFCC")
@@ -543,22 +547,22 @@ class LibraryManagementSystem:
         Framebutton = Frame(self.root, bd = 10, relief=RIDGE, padx=20, bg="#EEDFCC")
         Framebutton.place(x = 0, y = 540, width=1530, height=70)
 
-        btnAddData=Button(Framebutton, command=self.add_data, text="Add Data",  font=("arial", 12,"bold"), width=23 ,bg="azure",fg="black")
+        btnAddData=Button(Framebutton, command=self.add_data, text="ADD DATA",  font=("arial", 12,"bold"), width=23 ,bg="white",fg="black")
         btnAddData.grid(row=0,column=0)
 
-        btnAddData=Button(Framebutton, command=self.showData, text="Show Data",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton, command=self.showData, text="SHOW DATA",  font=("arial", 12,"bold"), width=23,bg="#1E90FF",fg="black")
         btnAddData.grid(row=0,column=1)
 
-        btnAddData=Button(Framebutton,command=self.update,text="Update",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton,command=self.update,text="UPDATE",  font=("arial", 12,"bold"), width=23,bg="#00C957",fg="black")
         btnAddData.grid(row=0,column=2)
 
-        btnAddData=Button(Framebutton,command=self.delete,text="Delete",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton,command=self.delete,text="DELETE",  font=("arial", 12,"bold"), width=23,bg="black",fg="white")
         btnAddData.grid(row=0,column=3)
 
-        btnAddData=Button(Framebutton, command=self.reset, text="Reset",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton, command=self.reset, text="RESET",  font=("arial", 12,"bold"), width=23,bg="#00FFFF",fg="black")
         btnAddData.grid(row=0,column=4)
         
-        btnAddData=Button(Framebutton,command=self.iExit,text="Exit",  font=("arial", 12,"bold"), width=23,bg="azure",fg="black")
+        btnAddData=Button(Framebutton,command=self.iExit,text="EXIT",  font=("arial", 12,"bold"), width=23,bg="#EE0000",fg="black")
         btnAddData.grid(row=0,column=5)
 
         #INFORMATION FRAME
@@ -790,6 +794,8 @@ class LibraryManagementSystem:
             conn.close()
 
             messagebox.showinfo("Success","Member has been Deleted")
+
+
 
 if __name__ == '__main__':
     root=Tk()
