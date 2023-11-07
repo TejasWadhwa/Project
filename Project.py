@@ -585,6 +585,7 @@ class LibraryManagementSystem:
         xscroll.config(command=self.library_table.xview)
         yscroll.config(command=self.library_table.yview)
 
+        
         self.library_table.heading("member",text="Member")
         self.library_table.heading("prnno", text="PRN No.")
         self.library_table.heading("idno", text="ID No.")
@@ -657,7 +658,7 @@ class LibraryManagementSystem:
         self.fetch_data()
         conn.close()
 
-        messagebox.showinfo("Sucess", "Member Successfully Inserted")
+        messagebox.showinfo("Sucess", "Member Inserted Successfully")
     
     def update(self):
         conn = mysql.connector.connect(host = "localhost", username = "root", password = "Professor1348", database = "my_data")
@@ -688,7 +689,7 @@ class LibraryManagementSystem:
         self.reset()
         conn.close()
 
-        messagebox.showinfo("Sucess", "Member has been Updated")
+        messagebox.showinfo("Success", "Member Updated !")
 
 
     def fetch_data(self):
@@ -773,8 +774,8 @@ class LibraryManagementSystem:
 
 
     def iExit(self):
-        iExit=tkinter.messagebox.askyesno("Library Management System","Do you want to exit")
-        if iExit>0:
+        iExit=tkinter.messagebox.askyesno("Library Management System","Do you want to exit ?")
+        if iExit>0: 
             self.root.destroy()
             return
     
@@ -793,7 +794,7 @@ class LibraryManagementSystem:
             self.reset()
             conn.close()
 
-            messagebox.showinfo("Success","Member has been Deleted")
+            messagebox.showinfo("Success","Member Deleted !")
 
 
 
