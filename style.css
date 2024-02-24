@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 30px;
     background-color: #f8ece2;
     box-shadow: 0 7px 20px rgba(0,0,0,0.09);
     z-index: 999;
@@ -34,20 +34,20 @@
 
 #navbar li{
     list-style: none;
-    padding: 0 10px;
+    padding: 0 20px;
     position: relative;
 }
 
 #navbar li a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
     color:  burlywood;
     transition: 0.3s ease;
 }
 
 #navbar li a span{
-    font-size: 30px;
+    font-size: 50px;
 }
 
 #navbar li a.active{
@@ -185,7 +185,7 @@
 } 
 
 #feature .fe-box:hover{
-    box-shadow: 10px 10px 54px rgba(13, 183, 195, 0.585);
+    box-shadow: 20px 7px 5px rgb(171, 234, 244);
     cursor: pointer;
 }
 
@@ -242,7 +242,7 @@
         font-size: 25px;
 }
 
-#product1 h2::after{
+/* #product1 h2::after{
     content: '';
     position: absolute;
     width: 150px;
@@ -250,8 +250,8 @@
     background-color: coral;
     bottom: -48.2%;
     left: 50%;
-    transform:translateX(-59%);
-}
+    transform:translateX(-50%);
+} */
 
 #product1 .container{
     width: 20%;
@@ -765,8 +765,8 @@ footer a:hover{
     width: 100%;
     text-align: center;
 }
-
-/* @media (min-width:768px),(max-width:1023) {
+/* 
+@media (min-width:768px),(max-width:1023) {
     #navbar{
         display: flex;
         flex-direction: column;
@@ -794,5 +794,5 @@ footer a:hover{
         font-size: 24px;
         padding-left: 20px;
     }
-    
 } */
+
