@@ -185,7 +185,7 @@
 } 
 
 #feature .fe-box:hover{
-    box-shadow: 20px 7px 5px rgb(171, 234, 244);
+    box-shadow: 15px 9px 5px rgb(122, 227, 224);
     cursor: pointer;
 }
 
@@ -196,7 +196,7 @@
     line-height: 2;
     border-radius: 8%;
     color: rebeccapurple;
-    background-color: paleturquoise
+    background-color: paleturquoise;
 
 }
 
