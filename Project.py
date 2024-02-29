@@ -586,8 +586,8 @@ class LibraryManagementSystem:
         yscroll.config(command=self.library_table.yview)
 
         
-        self.library_table.heading("member",text="Member")
-        self.library_table.heading("prnno", text="PRN No.")
+        self.library_table.heading("member", text="Member")
+        self.library_table.heading("prnno",text="PRN No.")
         self.library_table.heading("idno", text="ID No.")
         self.library_table.heading("firstname", text="First Name")
         self.library_table.heading("lastname", text="Last Name")
@@ -636,6 +636,7 @@ class LibraryManagementSystem:
         my_cursor.execute("insert into library values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(
             self.member_var.get(),
             self.prn_var.get(),
+
             self.id_var.get(),
             self.firstname_var.get(),
             self.lastname_var.get(),
@@ -663,7 +664,7 @@ class LibraryManagementSystem:
     def update(self):
         conn = mysql.connector.connect(host = "localhost", username = "root", password = "Professor1348", database = "my_data")
         my_cursor = conn.cursor()
-        my_cursor.execute("update library set Member=%s,ID=%s,FirstName=%s,LastName=%s,Address1=%s,Address2=%s,PostId=%s,Mobile=%s,Bookid=%s,BookTitle=%s,Auther=%s,Dateborrowed=%s,Datedue=%s,daysofbook=%s,latereturnfine=%s,dateoverdue=%s,finalprice=%s where PRN_NO=%s",(
+        my_cursor.execute("update library set Member=%s,ID=%s,FirstName=%s,LastName=%s,Address1=%s,Address2=%s,PostId=%s,Mobile=%s,Bookid=%s,BookTitle=%s,Auther=%s,Dateborrowed=%s,Datedue=%s,daysonbooks=%s,latereturnfine=%s,dateoverdue=%s,finalprice=%s where PRN_NO=%s",(
              self.member_var.get(),
              self.id_var.get(),
              self.firstname_var.get(),
