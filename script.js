@@ -1,3 +1,4 @@
+// mobile 
 const bar = document.getElementById('bar');
 const close = document.getElementById('close');
 const navbar = document.getElementById('navbar');
@@ -13,3 +14,4 @@ if(close){
         navbar.classList.remove('active');
     })
 }
+
