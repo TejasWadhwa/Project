@@ -2,28 +2,44 @@
 <html>
     <head>
         <title>CONTACT FORM</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link rel="stylesheet" href="contact.css">
     </head>
     <body>
         <div class="main">
             <input type="checkbox" id="chk" aria-hidden="true">
-
             <div class="sign-up">
-                <form>
+            <form>
                     <label for="chk" aria-hidden="true">Sign Up</label>
-                    <input type="text" name="txt" placeholder="USERNAME" required="">
-                    <input type="email" name="email" placeholder="EMAIL" required="">
-                    <input type="password" name="pswd" placeholder="PASSWORD" required="">
-                    <button>Sign Up</button>
+                    <input type="text" id="txt" name="txt" placeholder="USERNAME" required="">
+                    <span class="material-symbols-outlined">call<input type="phone no." name="phone" placeholder="PHONE NO."></span>
+                    <input type="email" id="email" name="email" placeholder="EMAIL" required="">
+                    <input type="password" id="pass" name="pswd" placeholder="PASSWORD" required="">
+                    <button type="button" onclick="savedata()" id="submit">Sign Up</button>
                 </form>
             </div>
-            <div class="login"></div>
+            <div class="login">
             <form>
                 <label for="chk" aria-hidden="true">Login</label>
                 <input type="email" name="email" placeholder="EMAIL" required="">
                 <input type="password" name="pswd" placeholder="PASSWORD">
-                <button>Login</button>
+                <label id="rem"><a href="#">Forget Password?</a></label>
+                <button type="button" onclick="savedata()" id="submit">Login</button>
             </form>
+
+            <script type="text/javascript">
+                function savedata(){
+                    event.preventDefault();
+                    var txt = document.getElementById("txt").value;
+                    var email = document.getElementById("email").value;
+                    var pass = document.getElementById("pass").value;
+
+                    localStorage.setItem('pass', pass);
+                    localStorage.setItem('txt', txt);
+                    localStorage.setItem('email', email);
+                }
+
+            </script>
         </div>
     </body>
 </html>
