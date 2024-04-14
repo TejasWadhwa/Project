@@ -773,7 +773,33 @@ footer a:hover{
     text-align: center;
 }
 
+/* About Page */
 
+#page.about-header{
+    background-image: url(banner.png);
+}
+
+#about-head{
+    display: flex;
+    align-items: center;
+}
+#about-head img{
+    width: 50%;
+    height: auto;
+}
+
+#about-head div{
+    padding-left: 40px;
+}
+
+#about-app{
+    text-align: center;
+    font-size: 50px;
+}
+
+#about-app .video{
+    
+}
 
 @media screen and (max-width: 770px) {
     body{
