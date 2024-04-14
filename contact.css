@@ -11,6 +11,7 @@ body{
 }
 
 .main{
+    z-index: 1;
     width: 350px;
     height: 500px;
     overflow: hidden;
@@ -44,40 +45,45 @@ label{
 input{
     width: 60%;
     height: 20px;
-    background:  rgba(250, 235, 215, 0.717);
+    background:  transparent;
     justify-content: center;
     display: flex;
-    margin: 18px auto;
+    margin: 16px auto auto;
     padding: 8px;
-    border: none;
+    position: relative;
+    border: 2px;
+    border-bottom: 2px solid rgb(60, 60, 131);
     outline: none;
-    border-radius: 5px;
+    border-radius: 1px;
 }
 
 button{
     width: 100px;
     height: 40px;
     margin-left: 36%;
-    justify-content: center;
     display: block;
-    color: beige;
     background: #573b8a;
     font-size: 1em;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 12px;
     outline: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 9px;
     transition: 0.2s ease-in;
     cursor: pointer;
 }
 
+button a{
+    text-decoration: none;
+    color: beige;
+}
+
 button:hover{
-    background: #6d44b8;
+    background: #560fda71; 
 }
 
 .login{
-    height: 450px;
+    height: 440px;
     background: rgb(255, 255, 255);
     border-radius: 60% / 10%;
     transform: translateY(-190px);
@@ -105,4 +111,40 @@ button:hover{
    align-items: center;
    justify-items: start;
    font-size: 20px;
+}
+
+input::-webkit-input-placeholder{
+     color: rgb(60, 60, 131);
+}
+
+.user input{
+    display: inline-flex;
+    margin: 7.5px;
+    align-items: center;
+    position: relative;
+}
+
+.phone input{
+    display: inline-flex;
+    margin: 7.5px;
+    align-items: center;
+    position: relative;
+}
+
+.email input{
+    display: inline-flex;
+    margin: 7.5px;
+    align-items: center;
+    position: relative;
+}
+
+.pass input{
+    display: inline-flex;
+    margin: 7.5px;
+    align-items: center;
+    position: relative;
+}
+
+i{
+    color: rgb(10, 21, 33);
 }
