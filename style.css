@@ -918,14 +918,13 @@ footer a:hover{
 #blog .blog-box{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     width: 95%;
     position: relative;
     padding-bottom: 90px;
-
 }
 
 #blog .blog-img{
-    display: block;
     width: 50%;
     margin-right: 40px;
 }
@@ -940,8 +939,8 @@ footer a:hover{
     width: 50%;
     margin-top: 0;
     position: absolute;
-    background: rgba(0,0,0,0.6);
     display: flex;
+    background: rgba(0,0,0,0.6);
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1003,3 +1002,4 @@ footer a:hover{
     color: #bebfc0;
     z-index: -9;
 }
+
