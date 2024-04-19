@@ -792,13 +792,14 @@ footer a:hover{
 /* About Page */
 
 #page.about-header{
-    background-image: url(banner.png);
+    background-image: url(about.jpg);
 }
 
 #about-head{
     display: flex;
     align-items: center;
 }
+
 #about-head img{
     width: 50%;
     height: auto;
@@ -814,7 +815,15 @@ footer a:hover{
 }
 
 #about-app .video{
-    
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 40px auto;
+}
+
+#about-app .video video{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
 }
 
 @media screen and (max-width: 770px) {
