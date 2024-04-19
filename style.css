@@ -159,6 +159,11 @@
     cursor: pointer;
 }
 
+#article a{
+    text-decoration-line: none;
+    color: black;
+}
+
 #feature {
     display: flex;
     align-items: center;
@@ -363,7 +368,7 @@
 
 
 #banner button{
-    width: 240px;
+    width: 280px;
     height: 50px;
     padding: 2px 30px 9px;
     font-size: 28px;
@@ -373,6 +378,11 @@
     border-radius: 20px;
     background-color: rgba(62, 62, 62, 0.333);
     color: antiquewhite;
+}
+
+#banner a{
+    text-decoration-line: none;
+    color: whitesmoke;
 }
 
 #banner button:hover{
@@ -393,7 +403,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    cursor: pointer;
+    cursor: auto;
 }
 
 #sm-banner .banner-box{
@@ -441,7 +451,7 @@
     font-size: 30px;
     color: rgba(68, 101, 68, 0.933);
     background-color: transparent;
-    cursor: pointer;
+    cursor: auto;
     border: 1px solid #bebfc0;
     outline: none;
     transition: 0.2s;
@@ -452,6 +462,7 @@
     border: 1px solid #3B5999;
     color:  ghostwhite;
 }
+
 
 #banner3 .banner-box{
     display: flex;
@@ -568,6 +579,11 @@
     color: #bebfc0;
     outline: 9%;
     white-space: nowrap;
+}
+
+#newsletter a{
+    text-decoration-line: none;
+    color: #f8ece2;
 }
 
 button.normal{
@@ -773,7 +789,33 @@ footer a:hover{
     text-align: center;
 }
 
+/* About Page */
 
+#page.about-header{
+    background-image: url(banner.png);
+}
+
+#about-head{
+    display: flex;
+    align-items: center;
+}
+#about-head img{
+    width: 50%;
+    height: auto;
+}
+
+#about-head div{
+    padding-left: 40px;
+}
+
+#about-app{
+    text-align: center;
+    font-size: 50px;
+}
+
+#about-app .video{
+    
+}
 
 @media screen and (max-width: 770px) {
     body{
