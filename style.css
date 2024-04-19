@@ -1054,3 +1054,34 @@ footer a:hover{
     z-index: -9;
 }
 
+/* CART PAGE */
+
+#cart table thead td{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+}
+
+#cart td img{
+    width: 90px;
+    margin-top: 40px;
+}
+
+#cart table tbody td{
+    font-size: 26px;
+}
+
+#cart tbody td input{
+    width: 50px;
+    height: 50px;
+    font-size: 29px;
+    text-align: center;
+}
+
+#cart tbody td button{
+    border: 3px;
+    background-color: transparent;
+    width: 80px;
+    height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+}

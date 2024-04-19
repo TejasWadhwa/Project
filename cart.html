@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPPING WEBSITE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="shop/png" href="shop.png">
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="g&g logo.png" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a  href="home.html">HOME</a></li>
+                <li><a  href="Shop.html">SHOP</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a  href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li id="g-bag"><a class="active" href="cart.html"><span class="material-symbols-outlined">shopping_cart</span></a></li>
+                <!-- <a href="#" id="close"><i class="fa fa-times"></i></a>-->
+                </ul>
+        </div>
+        <!-- <div id="mobile">
+            <a href="cart.html"><span class="material-symbols-outlined">shopping_cart</span></a>
+            <i id = "bar" class="fa fa-outdent"></i>
+        </div> -->
+    </section>
+
+    <section id="page" class="about-header">
+        <h2>#KnowUs</h2>
+       <p>Read all case studies about our products! </p>
+    </section>
+ 
+    <section id="cart" class="section-p1">
+    <table width="100%">
+        <thead>
+            <tr>
+                <td>Remove</td>
+                <td>Image</td>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Subtotal</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="#"><span class="material-symbols-outlined">cancel</span></a></td>
+                <td><img src="ad8.png" alt="" id="img"></td>
+                <td>Originals Formal Wear</td>
+                <td>$90</td>
+                <td><input type="number" id="quantityInput" value="1" min="1"></td>
+                <td id="display"><input type="text"></td>
+                <td><button onclick="calculatePrice()">Total</button></td>
+            </tr>
+            <tr>
+                <td><a href="#"><span class="material-symbols-outlined">cancel</span></a></td>
+                <td><img src="ad7.jpg" alt="" id="img"></td>
+                <td>bell-Bottom Pant</td>
+                <td>$70</td>
+                <td><input type="number" id="Input" value="1" min="1"></td>
+                <td id="display1"><input type="text"></td>
+                <td><button onclick="Price()">Total</button></td>
+            </tr>
+            <tr>
+                <td><a href="#"><span class="material-symbols-outlined">cancel</span></a></td>
+                <td><img src="ad6.png" alt="" id="img"></td>
+                <td>Casual Wear</td>
+                <td>$60</td>
+                <td><input type="number" id="Input1" value="1" min="1"></td>
+                <td id="display2"><input type="text"></td>
+                <td><button onclick="Price1()">Total</button></td>
+            </tr>
+        </tbody>
+    </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter Your Coupon">
+                <button class="normal">Apply</button>
+                </div>
+            </div>
+
+            <div id="Subtotal">
+             <h3>Cart Totals</h3>
+            </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="shop.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 277 Washington DC,  Street 32,  San Francisco</p>
+            <p><strong>Phone:</strong> +01 2222 365/ (+91) 70 6290 0010</p>
+            <p><strong>Hours:</strong> 10:00 - 10:00, Mon - Sat</p><br>
+
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icons">
+                    <div class="icon facebook">
+                    <div class="tooltip">Facebook</div>
+                    <i class="fa fa-facebook"></i>
+                     </div>
+                    <div class="icon twitter">
+                    <div class="tooltip">Twitter</div>
+                    <i class="fa fa-twitter"></i>
+                     </div>
+                     <div class="icon instagram">
+                    <div class="tooltip">Instagram</div>
+                    <i class="fa fa-instagram"></i>
+                   </div>
+                   <div class="icon pinterest">
+                    <div class="tooltip">Pinterest</div>
+                    <i class="fa fa-pinterest"></i>
+                </div>
+                <div class="icon youtube">
+                    <div class="tooltip">YouTube</div>
+                    <i class="fa fa-youtube"></i>
+                </div>
+                    </div>
+                </div>
+            </div>
+
+        <div class="col">
+                <h4>About</h4>
+                <a href="about.html">About Us</a>
+                <a href="#">Delivery Information</a>
+                <a href="terms_and_condition.html">Privacy Policy</a>
+                <a href="terms_and_condition.html">Terms & Condition</a>
+                <a href="contact.html">Contact Us</a>
+        </div>   
+
+        <div class="col">
+            <h4>My Account</h4>
+                <a href="contact.html">Sign In</a>
+                <a href="#">View Cart</a>
+                <a href="#">My Wishlist</a>
+                <a href="#">Track My Order</a>
+                <a href="blog.html">Help</a>
+        </div>   
+
+        <div class="col-install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Pay</p><br>
+            <div class="row">
+                <img src="app.jpg" alt="">
+                <img src="play.jpg" alt=""><br>
+            </div>
+            <p>Secured Payment Gateway</p><br>
+            <img class="pay" src="pay.jpg" alt="">
+        <div class="copyright">
+        <p>© 2024, Tech etc- HTML CSS & JAVASCRIPT Ecommerce Template</p>
+         </div>
+      </div>
+    </footer>
+
+    <!-- <script src="script.js"></script> -->
+    <script>
+
+    function calculatePrice() {
+        var quantity = document.getElementById("quantityInput").value;
+      
+        var basePrice = 90; 
+        var totalPrice = basePrice * quantity;
+        document.getElementById("display").textContent = " $" + totalPrice;
+      }
+
+      function Price() {
+        var quantity = document.getElementById("Input").value;
+      
+        var basePrice = 70; 
+        var totalPrice = basePrice * quantity;
+        document.getElementById("display1").textContent = " $" + totalPrice;
+      }
+
+      function Price1() {
+        var quantity = document.getElementById("Input1").value;
+      
+        var basePrice = 60; 
+        var totalPrice = basePrice * quantity;
+        document.getElementById("display2").textContent = " $" + totalPrice;
+      }
+
+      </script>
+
+</body>
+</html>
