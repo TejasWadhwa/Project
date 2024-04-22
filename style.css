@@ -798,6 +798,13 @@ footer a:hover{
 #about-head{
     display: flex;
     align-items: center;
+    font-size: 25px;
+}
+
+#about-head h2{
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+
 }
 
 #about-head img{
